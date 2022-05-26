@@ -6,3 +6,4 @@ function positiveSum(arr) {
 }
 
 positiveSum([33, 52, 23, 3, -22, -5324]);
+// expected result: 111
