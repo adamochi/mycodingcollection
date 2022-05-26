@@ -1,7 +1,7 @@
 function positiveSum(arr) {
-  console.log(arr);
+  //console.log(arr);
   arr = arr.filter((arr) => arr > 0);
-  console.log(arr);
+  //console.log(arr);
   console.log(arr.reduce((a, b) => a + b, 0));
 }
 
