@@ -1,0 +1,19 @@
+{
+  "name": "pack-configuration-party",
+  "version": "1.0.0",
+  "description": "this is a json config for codewars 8kyu level kata",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamochi/mycodingcollection.git"
+  },
+  "author": "Adam Sullivan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adamochi/mycodingcollection/issues"
+  },
+  "homepage": "https://github.com/adamochi/mycodingcollection#readme"
+}

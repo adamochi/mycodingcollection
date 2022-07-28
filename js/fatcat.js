@@ -81,3 +81,6 @@ function century(year) {
   return what;
 }
 console.log(century(1901));
+console.log(century(1900));
+console.log(century(2022));
+console.log(century(1501));
