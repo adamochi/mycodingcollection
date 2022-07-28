@@ -35,7 +35,11 @@ function countPositivesSumNegatives(input) {
   }
   const pos = input.filter(isPos);
   const neg = input.filter(isNeg);
-  return `[${pos} - ${neg}]`;
+  return `[${pos.reduce(function (a, b) {
+    return a + b;
+  }, 0)} - ${neg.reduce(function (a, b) {
+    return a + b;
+  }, 0)}]`;
 }
 function anotherCountPositivesSumNegatives(input) {
   const quickMaths = input.reduce(function (a, b) {
