@@ -27,25 +27,57 @@ For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should r
 */
 
 function countPositivesSumNegatives(input) {
+  if (input === undefined || input === null || input === 0) {
+    return [];
+  }
   function isPos(value) {
-    return value >= 0;
+    return value > 0;
   }
   function isNeg(value) {
     return value <= 0;
   }
   const pos = input.filter(isPos);
+  positiveLength = pos.length;
   const neg = input.filter(isNeg);
-  return `[${pos.reduce(function (a, b) {
+  negativeSum = neg.reduce(function (a, b) {
     return a + b;
-  }, 0)} - ${neg.reduce(function (a, b) {
-    return a + b;
-  }, 0)}]`;
+  }, 0);
+  if (positiveLength === 0 && negativeSum === 0) {
+    return [];
+  } else return [positiveLength, negativeSum];
 }
+
+console.log(countPositivesSumNegatives([0, 0]));
+console.log(countPositivesSumNegatives());
+console.log(countPositivesSumNegatives([]));
+
+console.log(countPositivesSumNegatives([0]));
+
+console.log(countPositivesSumNegatives([2, 3, 4, 5, -3, 3, -3]));
+
+console.log(
+  countPositivesSumNegatives([
+    0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14,
+  ])
+);
+
 function anotherCountPositivesSumNegatives(input) {
   const quickMaths = input.reduce(function (a, b) {
     return a + b;
   }, 0);
   return quickMaths;
 }
-console.log(countPositivesSumNegatives([2, 3, 4, 5, -3, 3, -3]));
 console.log(anotherCountPositivesSumNegatives([2, 3, 4, 5, -3, 3, -3]));
+
+/*
+The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
+
+Task
+Given a year, return the century it is in.
+*/
+
+function century(year) {
+  const what = Math.ceil(year / 100);
+  return what;
+}
+console.log(century(1901));
