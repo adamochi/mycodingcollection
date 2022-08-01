@@ -84,3 +84,20 @@ console.log(century(1901));
 console.log(century(1900));
 console.log(century(2022));
 console.log(century(1501));
+
+console.log("KM/h to CM/s");
+/*
+The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
+
+For example:
+
+1.08 --> 30
+Note! The input is a Real number (actual type is language dependent) and is >= 0. The result should be an Integer.
+*/
+function cockroachSpeed(s) {
+  const cmPerSecond = (s * 100000) / 60 / 60;
+  return Math.floor(cmPerSecond);
+}
+console.log(
+  `a cockroach moving at 1km/h is ${cockroachSpeed(1)}cm per second!`
+);
